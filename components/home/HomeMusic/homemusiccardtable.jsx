@@ -65,7 +65,7 @@ const HomeMusicCardTable = () => {
         currentSong && 
         <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-1`}>
           <div className='bg-white'>
-            <div className='py-5 px-10 flex items-center gap-32'>
+            <div className='py-5 px-10 flex items-center gap-5'>
 
               <div className='flex gap-5 items-center'>
                 <Image className='w-14 rounded-lg' src={currentSong.icon} alt="Icon music" />
@@ -81,7 +81,7 @@ const HomeMusicCardTable = () => {
                   autoPlay
               /> 
 
-              <AudioControls pause={pause} setPause={setPause} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} canciones={canciones} />
+              <AudioControls pause={pause} setPause={setPause} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} canciones={canciones} setAside={setAside} />
             </div>
           </div>
         </div>
