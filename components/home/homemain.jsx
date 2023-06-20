@@ -8,7 +8,7 @@ const HomeMain = () => {
   return (
     <div className='grid grid-cols-[384px_839px] items-center gap-32'>
         <div className='flex flex-col gap-3'>
-            <h3 className='text-4xl font-semibold'>The all-in-one content creation platform for Media Agencies</h3>
+            <h3 className='text-4xl font-semibold '>The all-in-one content creation platform for Media Agencies</h3>
             <p className='w-80 font-quest'>Streamline production, reduce costs, and create high-quality content with Workables.</p>
             <GetStarted info="Get started" />
         </div>
