@@ -5,16 +5,6 @@ import GetStarted from '../button/getstarted'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
-export function links() {
-    return [
-      {
-        rel:'stylesheet',
-        href:styles
-      }
-    ]
-}
-
 const Header = () => {
   return (
     <header className='flex flex-col md:flex-row gap-5 md:justify-between items-center mx-20 my-5'>
