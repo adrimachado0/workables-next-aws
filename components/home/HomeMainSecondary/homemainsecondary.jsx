@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import HomeSecondaryComponent from './HomeSecondaryComponent'
+import HomeSecondaryComponent from './homesecondarycomponent'
 
 import HomeStreamLine from './img/HomeStreamLine.png';
 import HomeCalls from './img/HomeCalls.png';
