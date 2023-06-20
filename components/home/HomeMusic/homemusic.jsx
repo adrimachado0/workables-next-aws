@@ -13,21 +13,6 @@ const HomeMusic = () => {
             <GetStarted info='sing up' />  
         </div>
         <HomeMusicCard />
-
-          {/* <div className={`bg-red-300 ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full`}>
-            <h2>Reproductor de Música</h2>
-              <div className="current-song">
-                <audio
-                  ref={audioRef}
-                  src={currentSong}
-                  autoPlay
-                  onPause={isPlaying}
-                  controls
-                />
-                <button onClick={pausarAudio}>prueba</button>
-              </div>
-              <button onClick={() => {setAside(false); pausarAudio()}}>Cerrar</button>
-          </div> */}
     </div>
   )
 }

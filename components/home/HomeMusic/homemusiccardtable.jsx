@@ -1,6 +1,7 @@
 'use client';
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import HomeMusicCardTableSection from './homemusiccardtablesection'
+import AudioControls from './audiocontrols'; 
 
 import GottaFeelingIcon from './songIcon/iGottaFeelingIcon.jpg'
 import OneKissIcon from './songIcon/OneKissIcon.jpg'
@@ -19,6 +20,7 @@ const HomeMusicCardTable = () => {
       genre:'Pop',
       duration:'4:49',
       icon:GottaFeelingIcon,
+      id:1
     },
     {
       music:'/oneKiss.mp3',
@@ -26,13 +28,19 @@ const HomeMusicCardTable = () => {
       genre:'Dance Pop',
       duration:'3:43',
       icon:OneKissIcon,
+      id:2
     },
   ])
+
+  const [pause, setPause] = useState(false)
+
+  useEffect(() => {
+    setPause(false)
+  }, [currentSong])
 
   return (
     <div>
       {
-        canciones &&
         <div className={`gradiente rounded-b-4xl pt-0.5`}>
             {
               canciones.map( canciones => (
@@ -46,6 +54,8 @@ const HomeMusicCardTable = () => {
 
                   aside={aside}
                   setAside={setAside}
+
+                  setPause={setPause}
                 />
               ))
             }
@@ -53,26 +63,27 @@ const HomeMusicCardTable = () => {
       }
       {
         currentSong && 
-        <div className={`bg-red-300 ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full`}>
-            <div className='py-5 px-10 flex items-center gap-3'>
+        <div className={`gradient-aside ${aside ? 'fixed' : 'hidden'} bottom-0 left-0 w-full pt-1`}>
+          <div className='bg-white'>
+            <div className='py-5 px-10 flex items-center gap-32'>
+
+              <div className='flex gap-5 items-center'>
                 <Image className='w-20 rounded-lg' src={currentSong.icon} alt="Icon music" />
-                <div className='w-full flex justify-between'>
-                    <div>
-                      <p>{currentSong.song}</p>
-                      <p>{currentSong.genre}</p>
-                    </div>
-                        {/* <p onClick={() => {console.log(audioRef.current.duration)}}>Duration: 4:49</p> */}
-                    <div>
-                      <p>a</p>
-                    </div>
-                    <audio
-                        ref={audioRef}
-                        src={currentSong.music}
-                        autoPlay
-                        controls
-                    />
+                <div className='w-32'>
+                  <p>{currentSong.song}</p>
+                  <p className='text-gray-400'>{currentSong.genre}</p>
                 </div>
+              </div>
+
+              <audio
+                  ref={audioRef}
+                  src={currentSong.music}
+                  autoPlay
+              /> 
+
+              <AudioControls pause={pause} setPause={setPause} audioRef={audioRef} currentSong={currentSong} setCurrentSong={setCurrentSong} canciones={canciones} />
             </div>
+          </div>
         </div>
       }
     </div>

@@ -39,7 +39,10 @@ body {
     -webkit-text-stroke: 4px transparent;
 }
 
-
+.gradient-aside {
+    background: rgb(255,117,130) !important;
+    background: linear-gradient(135deg, #5fafff 25% ,#ff7582 65%) !important;
+}
 
 .footer {
     background-color: #FFDDE0;

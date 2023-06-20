@@ -3,14 +3,16 @@ import React from 'react'
 
 import Image from 'next/image';
 
-const HomeMusicCardTableSection = ({canciones, currentSong, setCurrentSong, setAside, audioRef}) => {
+const HomeMusicCardTableSection = ({setPause, canciones, currentSong, setCurrentSong, setAside, audioRef}) => {
 
   const handleButtonMusic = () => {
 
     if(currentSong && currentSong.music === canciones.music) {
       if(audioRef.current.paused) {
+        setPause(false)
         return audioRef.current.play()
       } else {
+        setPause(true)
         return audioRef.current.pause()
       }
     }
