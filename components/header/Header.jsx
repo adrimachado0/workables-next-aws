@@ -10,7 +10,7 @@ const Header = () => {
     <header className='flex flex-col md:flex-row gap-5 md:justify-between items-center mx-20 my-5'>
         <Link href='/'><Image className=' w-52' src={Logo} alt="Logo Workables" /></Link>
         <div className='flex gap-5 items-center'>
-            <Link href='/login' className='cursor-pointer font-quest'>Sign in</Link>
+            <p className='cursor-pointer font-quest'>Sign in</p>
             <GetStarted info="Get started"/>
         </div>
     </header>
