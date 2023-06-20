@@ -7,8 +7,6 @@ import Next from './controlicon/next.png'
 import Play from './controlicon/play.png'
 import Pause from './controlicon/pause.png'
 
-import formatTime from './helper'
-
 const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, canciones}) => {
 
     const handleClickPlay = () => {
