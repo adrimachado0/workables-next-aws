@@ -2,26 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-family: 'Questrial';
+}
+
+.gradiente {
+    background: rgb(255,117,130) !important;
+    background: linear-gradient(135deg, #ff7582 35% ,#5fafff 75%) !important;
+}
+
+.gradiente-opacity {
+    background: rgb(255,117,130) !important;
+    background: linear-gradient(100deg, #ff7582 35% ,#5fafff 75%) !important;
+    opacity: 25%;
+    box-shadow: 0px 0px 40px 0px #ff7582;
+}
+
+.home-spark-title {
+    background: #FF7582;
+    background: linear-gradient(to right, #FF7582 0%, #5fafff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.step-gradient {
+    background: #FF7582;
+    background: linear-gradient(to right, #FF7582 0%, #5fafff 15%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.music-title-gradient {
+    background: linear-gradient(100deg, #ff7582 ,#5fafff 50%);
+    /* background: linear-gradient(-45deg, #eeaa52, #e73c6f, #2394d5, #2af3b7); */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
+
+/**   FOOTER   **/
+
+.footer {
+    background-color: #FFDDE0;
+}
+
+.boxes:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100% );
+    transform: translate3d(0px, 0px, 0) scale(0.95);
+    filter: blur(20px);
+    opacity: var(1);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.boxes::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: inherit;
+    border-radius: inherit;
 }
