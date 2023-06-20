@@ -58,6 +58,35 @@ const AudioControls = ({pause, setPause, audioRef, currentSong, setCurrentSong, 
                         </button>
                 }
             </div>
+            <div className='flex items-center'>
+                <span className='mr-2'>
+                    00:00
+                </span>
+                <div className='relative w-[709px] h-1 bg-gray-600 rounded-full mr-2'>
+                    <input 
+                        type="range" 
+                        className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer" 
+                        min={0}
+                        step={1} 
+                    />
+                    <div 
+                        className="absolute top-0 left-0 h-full bg-blue-500 rounded-full"
+
+                    ></div>
+                </div>
+                <span className='mr-2'>
+                    00:30
+                </span>
+            </div>
+            <div className='flex items-center'>
+                <input 
+                    type="range" 
+                    className='w-[136px] h-1 rounded-full mr-2' 
+                    min={0}
+                    max={1}
+                    step={0.1}
+                />
+            </div>
         </div>
     )
 }

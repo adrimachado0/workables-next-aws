@@ -68,8 +68,8 @@ const HomeMusicCardTable = () => {
             <div className='py-5 px-10 flex items-center gap-32'>
 
               <div className='flex gap-5 items-center'>
-                <Image className='w-20 rounded-lg' src={currentSong.icon} alt="Icon music" />
-                <div className='w-32'>
+                <Image className='w-14 rounded-lg' src={currentSong.icon} alt="Icon music" />
+                <div className='w-36'>
                   <p>{currentSong.song}</p>
                   <p className='text-gray-400'>{currentSong.genre}</p>
                 </div>
