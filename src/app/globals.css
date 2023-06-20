@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+/* body {
     font-family: 'Questrial';
 }
 
@@ -34,39 +34,13 @@ body {
 
 .music-title-gradient {
     background: linear-gradient(100deg, #ff7582 ,#5fafff 50%);
-    /* background: linear-gradient(-45deg, #eeaa52, #e73c6f, #2394d5, #2af3b7); */
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
 }
 
-/**   FOOTER   **/
+
 
 .footer {
     background-color: #FFDDE0;
-}
-
-.boxes:before {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100% );
-    transform: translate3d(0px, 0px, 0) scale(0.95);
-    filter: blur(20px);
-    opacity: var(1);
-    transition: opacity 0.3s;
-    border-radius: inherit;
-}
-
-/* 
-* Prevents issues when the parent creates a 
-* stacking context. (For example, using the transform
-* property )
-*/
-.boxes::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    background: inherit;
-    border-radius: inherit;
-}
+} */
